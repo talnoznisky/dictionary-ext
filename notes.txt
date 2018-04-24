@@ -1,0 +1,18 @@
+Steps:
+1. API credentials via https://developer.oxforddictionaries.com/
+2. Create repo in github and clone to desktop
+3. subl new txt file for documentation notes
+
+
+
+var apiBaseUrl = "https://od-api.oxforddictionaries.com/api/v1",
+appId = "4e9a0183",
+apiKey = "18a63f64a305e8c3ffc60d4fca61cf92",
+
+var Dictionary = require("oxford-dictionary-api");
+
+var app_id = "your oxford-account app id"; var app_key = "your oxford-account app key";
+
+var dict = new Dictionary(app_id,app_key);
+
+dict.find("ace",function(error,data){ if(error) return console.log(error); console.log(data); });
